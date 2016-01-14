@@ -1,0 +1,26 @@
+@import java.util
+
+@(products: util.List[Product], message: String)
+
+@main("Welcome to Play") {
+
+    <h1>Product list (@products.length)</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(product <- products) {
+                <tr>
+                    <td>@product.getId</td>
+                    <td>@product.getName</td>
+                    <td>@product.getPrice €</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

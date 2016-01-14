@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                          @controllers.Application.index()
+GET        /basic-string              @controllers.Application.basicString()
+GET        /basic-view                @controllers.Application.basicView()
+GET        /json-response             @controllers.Application.jsonResponse()
+GET        /simple-view               @controllers.Application.simpleView()
+GET        /async-jdbc-view           @controllers.Application.asyncJdbcView()
+GET        /blocking-jdbc-view        @controllers.Application.blockingJdbcView()
+GET        /ws-response               @controllers.Application.wsResponse()
+GET        /async-ws-view             @controllers.Application.asyncWsView()
+GET        /blocking-ws-view          @controllers.Application.blockingWsView()
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file              @controllers.Assets.versioned(path="/public", file: Asset)
